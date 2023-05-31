@@ -1,0 +1,67 @@
+﻿@model IEnumerable<projekt_albumy.Models.Album>
+
+@{
+    ViewData["Title"] = "Albumy";
+}
+
+<h1>Albumy</h1>
+
+<p>
+    @if (User.IsInRole("Moderator")) 
+    { 
+        <a asp-action="Create">Dodaj Nowy Album</a>
+    }
+        
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa Albumu
+            </th>
+            <th>
+                Rok Wydania
+            </th>
+            <th>
+                Zespół
+            </th>
+            <th>
+                Gatunek
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Band.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusicType.Name)
+            </td>
+            
+            <td>
+                @if (User.IsInRole("Moderator"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id"> Edytuj |</a>
+                }
+                @if (User.IsInRole("Basic"))
+                {
+                    <a asp-action="Details" asp-route-id = "@item.Id" > Szczegóły |</a>
+                }
+                @if (User.IsInRole("Moderator"))
+                {
+                    <a asp-action="Delete" asp-route-id = "@item.Id" > Usuń </a>
+                }
+            </td >
+        </tr >
+    }
+</tbody>
+</table>

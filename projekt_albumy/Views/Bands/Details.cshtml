@@ -1,0 +1,24 @@
+﻿@model projekt_albumy.Models.Band
+
+@{
+    ViewData["Title"] = "Zespoły";
+}
+
+<h1>Szczegóły Zespołu</h1>
+
+<div>
+    <h4>Zespół</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nazwa Zespołu
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edytuj</a> |
+    <a asp-action="Index">Powrót</a>
+</div>

@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-projekt_albumy-7A465C14-9781-4D8C-B310-4343C26D33C9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210202102228_test.cs" />
+    <Compile Remove="Migrations\20210202102228_test.Designer.cs" />
+    <Compile Remove="Migrations\20210202103807_test1.cs" />
+    <Compile Remove="Migrations\20210202103807_test1.Designer.cs" />
+    <Compile Remove="Migrations\20210202111838_test2.cs" />
+    <Compile Remove="Migrations\20210202111838_test2.Designer.cs" />
+    <Compile Remove="Migrations\20210202112559_test3.cs" />
+    <Compile Remove="Migrations\20210202112559_test3.Designer.cs" />
+    <Compile Remove="Migrations\20210202113618_test4.cs" />
+    <Compile Remove="Migrations\20210202113618_test4.Designer.cs" />
+    <Compile Remove="Migrations\20210202114320_test5.cs" />
+    <Compile Remove="Migrations\20210202114320_test5.Designer.cs" />
+    <Compile Remove="Migrations\20210202115337_test6.cs" />
+    <Compile Remove="Migrations\20210202115337_test6.Designer.cs" />
+    <Compile Remove="Migrations\20210202115838_test7.cs" />
+    <Compile Remove="Migrations\20210202115838_test7.Designer.cs" />
+    <Compile Remove="Migrations\20210202121607_test8.cs" />
+    <Compile Remove="Migrations\20210202121607_test8.Designer.cs" />
+    <Compile Remove="Migrations\20210202121908_test9.cs" />
+    <Compile Remove="Migrations\20210202121908_test9.Designer.cs" />
+    <Compile Remove="Migrations\20210202122730_test.cs" />
+    <Compile Remove="Migrations\20210202122730_test.Designer.cs" />
+    <Compile Remove="Migrations\20210202124820_test1.cs" />
+    <Compile Remove="Migrations\20210202124820_test1.Designer.cs" />
+    <Compile Remove="Migrations\20210202140820_test2.cs" />
+    <Compile Remove="Migrations\20210202140820_test2.Designer.cs" />
+    <Compile Remove="Migrations\20210202141636_test3.cs" />
+    <Compile Remove="Migrations\20210202141636_test3.Designer.cs" />
+    <Compile Remove="Migrations\20210202145230_Test4.cs" />
+    <Compile Remove="Migrations\20210202145230_Test4.Designer.cs" />
+    <Compile Remove="Migrations\20210202155556_Test5.cs" />
+    <Compile Remove="Migrations\20210202155556_Test5.Designer.cs" />
+    <Compile Remove="Migrations\20210202160238_Test6.cs" />
+    <Compile Remove="Migrations\20210202160238_Test6.Designer.cs" />
+    <Compile Remove="Migrations\20210202161734_Test.cs" />
+    <Compile Remove="Migrations\20210202161734_Test.Designer.cs" />
+    <Compile Remove="Migrations\20210202165616_Test.cs" />
+    <Compile Remove="Migrations\20210202165616_Test.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

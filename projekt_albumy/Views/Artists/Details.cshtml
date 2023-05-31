@@ -1,0 +1,36 @@
+﻿@model projekt_albumy.Models.Artist
+
+@{
+    ViewData["Title"] = "Wykonawcy";
+}
+
+<h1>Szczegóły Wykonawcy</h1>
+
+<div>
+    <h4>Wykonawca</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Imie
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            Nazwisko
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt class = "col-sm-2">
+            Zespół
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bands.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edytuj</a> |
+    <a asp-action="Index">Powrót</a>
+</div>

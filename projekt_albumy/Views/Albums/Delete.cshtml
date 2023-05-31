@@ -1,0 +1,44 @@
+﻿@model projekt_albumy.Models.Album
+
+@{
+    ViewData["Title"] = "Albumy";
+}
+
+<h1>Usuń Album</h1>
+
+<h3>Czy jesteś pewien że chcesz usunąć ten Album?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nazwa Abumu
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            Rok Wydania
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt class = "col-sm-2">
+            Zespół
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Band.Name)
+        </dd class>
+        <dt class = "col-sm-2">
+            Gatunek
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MusicType.Name)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Powrót</a>
+    </form>
+</div>

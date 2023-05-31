@@ -1,0 +1,38 @@
+﻿@model projekt_albumy.Models.Artist
+
+@{
+    ViewData["Title"] = "Wykonawcy";
+}
+
+<h1>Usuń Wykonawce</h1>
+
+<h3>Czy jesteś pewien że chcesz usunąć tego Wykonawce?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Imie
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            Nazwisko
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt class = "col-sm-2">
+            Zespół
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bands.Name)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Powrót</a>
+    </form>
+</div>

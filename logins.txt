@@ -1,0 +1,16 @@
+superadmin
+u - superadmin
+p - 123Pa$$word.
+
+admin
+u - admin
+p - Admin!2
+
+moderator
+u - user1
+p - User!2
+
+basic
+u - user2
+p - User!2
+
